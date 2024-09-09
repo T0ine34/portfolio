@@ -1,0 +1,13 @@
+.Line{
+    text-align: left;
+}
+
+.Line .superior{
+    display: inline;
+    padding-right: 0.5em;
+    color: white;
+}
+
+.Line .content{
+    display: inline;
+}
