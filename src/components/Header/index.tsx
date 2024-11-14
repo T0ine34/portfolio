@@ -1,69 +1,52 @@
 import './index.scss';
 
 import SpawnEffect from '../SpawnEffect';
-import React, { useState } from 'react';
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+import { PageContext } from '../../context';
+import React, { useContext } from 'react';
 import type { MenuProps } from 'antd';
 import { Menu } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faListCheck, faSailboat } from '@fortawesome/free-solid-svg-icons';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
 
 const items: MenuItem[] = [
     {
-      label: 'Navigation One',
-      key: 'mail',
-      icon: <FontAwesomeIcon icon={faHouse} />,
+        label: 'Home',
+        key: 'home',
+        icon: <FontAwesomeIcon icon={faHouse} />,
     },
     {
-      label: 'Navigation Two',
-      key: 'app',
-      icon: <AppstoreOutlined />,
-      disabled: true,
+        label: 'My projects',
+        key: 'projects',
+        icon: <FontAwesomeIcon icon={faListCheck} />,
+        // children: [
+        //     {
+        //         label: 'Personal projects',
+        //         key: 'personal',
+        //     },
+        //     {
+        //         label: 'School projects',
+        //         key: 'school',
+        //     },
+        // ],
     },
     {
-      label: 'Navigation Three - Submenu',
-      key: 'SubMenu',
-      icon: <SettingOutlined />,
-      children: [
-        {
-          type: 'group',
-          label: 'Item 1',
-          children: [
-            { label: 'Option 1', key: 'setting:1' },
-            { label: 'Option 2', key: 'setting:2' },
-          ],
-        },
-        {
-          type: 'group',
-          label: 'Item 2',
-          children: [
-            { label: 'Option 3', key: 'setting:3' },
-            { label: 'Option 4', key: 'setting:4' },
-          ],
-        },
-      ],
-    },
-    {
-      key: 'alipay',
-      label: (
-        <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-          Navigation Four - Link
-        </a>
-      ),
-    },
-  ];
+        label: 'Sailing',
+        key: 'sailing',
+        icon: <FontAwesomeIcon icon={faSailboat} />
+    }
+];
 
 
 function Header() {
-    const [current, setCurrent] = useState('mail');
+    const { current, setCurrent } = useContext(PageContext);
 
     const onClick: MenuProps['onClick'] = (e) => {
         console.log('click ', e);
         setCurrent(e.key);
-      };
+    };
 
     return (
         <header>
