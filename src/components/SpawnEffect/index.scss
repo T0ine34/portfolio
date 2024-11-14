@@ -41,8 +41,8 @@
     }
 
     //  a better way to do this is to use SCSS
-    @for $i from 1 through 100 {
-        span:nth-child(#{100-$i}) {
+    @for $i from 1 through 500 {
+        span:nth-child(#{500-$i}) {
             animation-delay: 0.05s * $i;
         }
     }
