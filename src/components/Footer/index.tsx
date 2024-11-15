@@ -10,7 +10,7 @@ function Footer() {
                 <Mail mail="contact@antoinebuirey.fr" />
                 {/* <PhoneNumber number="07 68 37 77 85" /> */}
             </div>
-            <div className='line'>
+            <div className='line small'>
                 <Url url="https://github.com/T0ine34/portfolio" minimal>sources available on github</Url>
                 <p>© 2024 Antoine Buirey</p>
             </div>

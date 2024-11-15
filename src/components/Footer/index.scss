@@ -13,7 +13,7 @@ footer{
     justify-content: center;
 
     a{
-        color: #fff;
+        color: $background-color;
         text-decoration: none;
     }
     
@@ -25,6 +25,16 @@ footer{
 
         >*{
             margin: auto 0.5rem;
+        }
+    }
+
+    .small{
+        font-size: 0.8rem;
+        color: $secondary-color;
+
+        a{
+            color: $secondary-color;
+            text-decoration: underline;
         }
     }
 }
