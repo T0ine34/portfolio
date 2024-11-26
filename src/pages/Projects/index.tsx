@@ -4,7 +4,7 @@ import { PageContext } from '../../context';
 import React, { useContext } from 'react';
 
 function Projects({ children }: { children: React.ReactNode }) {
-        const { current, setCurrent } = useContext(PageContext);
+        const { current } = useContext(PageContext);
     
         if (current !== 'projects') {
             return null;

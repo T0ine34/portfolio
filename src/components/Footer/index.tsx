@@ -1,5 +1,5 @@
 import './index.scss';
-import { Url, Mail, PhoneNumber } from '../links';
+import { Url, Mail } from '../links';
 
 function Footer() {
     return (

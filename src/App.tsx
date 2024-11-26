@@ -19,7 +19,7 @@ function App() {
             <PageContext.Provider value={{ current, setCurrent }}>
                 <Header />
                 <Projects>
-                    <Project title="Project 1">
+                    <Project title="Project 1" linkTo="http://toto.com">
                         <p>Project 1 description</p>
                     </Project>
                     <Project title="Project 2">
